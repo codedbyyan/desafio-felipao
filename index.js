@@ -1,3 +1,4 @@
+//Quis fazer o desafio com loop para diferenciar um pouco.
 let continuar = true;
 
 while (continuar) {
