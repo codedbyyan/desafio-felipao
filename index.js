@@ -1,15 +1,32 @@
-//Exercício para dizer se o número é par ou impar com arrays.
-let impar = [];
-let par = [];
+let continuar = true;
 
-for (let i = 0; i < 5; i++) {
-  let number = Number(prompt("Digite um número aleatório:"));
-  if (number % 2 === 0) {
-    par.push(number);
+while (continuar) {
+  let nome = prompt("Digite o nome do herói:");
+  let xp = parseInt(prompt("Digite a quantidade de experiência (XP):"));
+  let nivel = "";
+
+  if (xp < 1000) {
+    nivel = "Ferro";
+  } else if (xp >= 1001 && xp <= 2000) {
+    nivel = "Bronze";
+  } else if (xp >= 2001 && xp <= 5000) {
+    nivel = "Prata";
+  } else if (xp >= 5001 && xp <= 7000) {
+    nivel = "Ouro";
+  } else if (xp >= 7001 && xp <= 8000) {
+    nivel = "Platina";
+  } else if (xp >= 8001 && xp <= 9000) {
+    nivel = "Ascendente";
+  } else if (xp >= 9001 && xp <= 10000) {
+    nivel = "Imortal";
   } else {
-    impar.push(number);
+    nivel = "Radiante";
+  }
+
+  console.log("O Herói de nome " + nome + " está no nível de " + nivel);
+
+  let resposta = prompt("Deseja testar outro herói? (s/n)");
+  if (resposta.toLowerCase() !== "s") {
+    continuar = false;
   }
 }
-
-console.log("Os números pares são: " + par.join(", "));
-console.log("Os números ímpares são: " + impar.join(", "));
